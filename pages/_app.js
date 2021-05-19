@@ -1,7 +1,9 @@
-import '../css/style.css'
-import '../css/form.css'
-import Head from 'next/head'
-import Link from 'next/link'
+import "../css/style.css";
+import "../css/form.css";
+import Head from "next/head";
+import Link from "next/link";
+
+// console.log("hoo");
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -30,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

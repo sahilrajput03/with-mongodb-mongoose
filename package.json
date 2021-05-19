@@ -13,5 +13,8 @@
     "react-dom": "^16.13.1",
     "swr": "0.2.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0"
+  }
 }

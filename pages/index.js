@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import dbConnect from '../utils/dbConnect'
-import Pet from '../models/Pet'
-        console.log("beeen here..")
+import Link from "next/link";
+import dbConnect from "../utils/dbConnect";
+import Pet from "../models/Pet";
 
 const Index = ({ pets }) => (
   <>
@@ -46,23 +45,23 @@ const Index = ({ pets }) => (
       </div>
     ))}
   </>
-)
+);
 
 /* Retrieves pet(s) data from mongodb database */
 export async function getServerSideProps() {
-  await dbConnect()
+  await dbConnect();
 
   /* find all the data in our database */
-  const result = await Pet.find({})
+  const result = await Pet.find({});
   const pets = result.map((doc) => {
-    const pet = doc.toObject()
-    pet._id = pet._id.toString()
-    return pet
-  })
+    const pet = doc.toObject();
+    pet._id = pet._id.toString();
+    return pet;
+  });
 
-  return { props: { pets: pets } }
+  return { props: { pets: pets } };
 }
 
-const hello = () => "hello"
+const hello = () => "hello";
 
-export default hello
+export default hello;
